@@ -1,0 +1,15 @@
+@import "tailwindcss";
+html{
+   scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Outfit:wght@100..900&family=Poppins:wght@400;700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+  font-family: "Outfit", sans-serif;
+}
+a:active p{
+  color: black;
+  text-decoration: underline rgb(0, 0, 0);
+  font-weight:400;
+}
