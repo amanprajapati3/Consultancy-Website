@@ -49,8 +49,8 @@ const Header = () => {
       <header
         className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           isScrolled
-            ? "bg-white shadow-md py-3"
-            : "bg-white/95 backdrop-blur-sm py-5"
+            ? "bg-white shadow-md py-0"
+            : "bg-white/95 backdrop-blur-sm py-0"
         }`}
       >
         <div className="max-w-7xl mx-auto px-5 lg:px-8">
@@ -58,10 +58,9 @@ const Header = () => {
             {/* Logo */}
             <a
               href="#home"
-              className="text-2xl font-bold tracking-wide text-slate-900"
+              className=""
             >
-              HRedge
-              <span className="text-blue-600 ml-1">Consultants</span>
+              <img src="/logo.jpeg" alt="" className="w-24 h-16" />
             </a>
 
             {/* Desktop Menu */}
