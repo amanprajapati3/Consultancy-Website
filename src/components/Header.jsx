@@ -60,8 +60,8 @@ const Header = () => {
               href="#home"
               className="text-2xl font-bold tracking-wide text-slate-900"
             >
-              APEX
-              <span className="text-blue-600 ml-1">Consultancy</span>
+              HRedge
+              <span className="text-blue-600 ml-1">Consultants</span>
             </a>
 
             {/* Desktop Menu */}

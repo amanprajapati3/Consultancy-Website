@@ -2,212 +2,117 @@ import React from "react";
 import {
   Briefcase,
   Users,
-  GraduationCap,
-  Search,
-  Globe,
-  Code,
-  ShoppingCart,
-  Laptop,
+  UserCheck,
+  Building2,
+  ClipboardList,
+  BadgeCheck,
+  ArrowRight,
 } from "lucide-react";
 import ScrollReveal from "../components/ScrollReveal";
 
-const consultancyServices = [
+const services = [
   {
-    icon: <Briefcase size={32} />,
-    title: "Job Assistance",
+    icon: <Briefcase size={34} />,
+    title: "Permanent Recruitment",
     description:
-      "Helping candidates find suitable job opportunities based on their skills and experience.",
+      "We help organizations hire talented professionals for long-term positions through a structured and efficient recruitment process.",
   },
   {
-    icon: <Users size={32} />,
-    title: "Career Guidance",
+    icon: <Users size={34} />,
+    title: "Contract Staffing",
     description:
-      "Professional advice to help students and professionals choose the right career path.",
+      "Flexible staffing solutions that help businesses quickly scale their workforce for temporary and project-based requirements.",
   },
   {
-    icon: <GraduationCap size={32} />,
-    title: "Student Consultation",
+    icon: <UserCheck size={34} />,
+    title: "Executive Search",
     description:
-      "Guidance for fresh graduates and students seeking career opportunities.",
+      "Identifying experienced leaders and senior professionals who can drive business growth and organizational success.",
   },
   {
-    icon: <Search size={32} />,
-    title: "Placement Support",
+    icon: <Building2 size={34} />,
+    title: "HR Consulting",
     description:
-      "Connecting candidates with companies and helping them prepare for interviews.",
-  },
-];
-
-const techServices = [
-  {
-    icon: <Globe size={32} />,
-    title: "Business Websites",
-    description:
-      "Professional and responsive websites designed to establish your online presence.",
+      "Professional HR solutions covering recruitment planning, workforce management and hiring strategies.",
   },
   {
-    icon: <Code size={32} />,
-    title: "Custom Web Applications",
+    icon: <ClipboardList size={34} />,
+    title: "Bulk Hiring",
     description:
-      "Tailored web solutions built using modern technologies like React and Node.js.",
+      "Efficient recruitment support for organizations looking to hire multiple candidates within short timelines.",
   },
   {
-    icon: <ShoppingCart size={32} />,
-    title: "E-Commerce Development",
+    icon: <BadgeCheck size={34} />,
+    title: "Talent Acquisition",
     description:
-      "Online stores with product management, payment integration, and modern UI.",
-  },
-  {
-    icon: <Laptop size={32} />,
-    title: "Website Maintenance",
-    description:
-      "Ongoing support, updates, optimization, and technical assistance for your website.",
+      "Connecting businesses with skilled professionals through industry-focused talent sourcing and screening.",
   },
 ];
 
-const ServiceCard = ({ service }) => {
-  return (
-    <div
-      className="
-        bg-white
-        rounded-2xl
-        md:p-8 p-2
-        border
-        border-gray-100
-        shadow-sm
-        hover:shadow-xl
-        hover:-translate-y-2
-        transition-all
-        duration-300
-        group
-      "
-    >
-      <div
-        className="
-          md:w-16
-          md:h-16 w-10 h-10
-          rounded-xl
-          bg-blue-50
-          text-blue-600
-          flex
-          items-center
-          justify-center
-          mb-6
-          group-hover:bg-blue-600
-          group-hover:text-white
-          transition-all
-          duration-300
-        "
-      >
-        {service.icon}
-      </div>
+const ServiceCard = ({ service }) => (
+  <div className="group bg-white rounded-2xl border border-gray-100 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
 
-      <h3 className="sm:text-xl text-md font-bold text-center text-gray-900 mb-3">{service.title}</h3>
-
-      <p className="text-gray-600 text-md text-center leading-relaxed">{service.description}</p>
+    <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition mb-6">
+      {service.icon}
     </div>
-  );
-};
+
+    <h3 className="text-2xl font-semibold text-gray-900 mb-4">
+      {service.title}
+    </h3>
+
+    <p className="text-gray-600 leading-7">
+      {service.description}
+    </p>
+
+    <button className="flex items-center gap-2 mt-6 text-blue-600 font-semibold group-hover:gap-3 transition-all">
+      Learn More
+      <ArrowRight size={18} />
+    </button>
+
+  </div>
+);
 
 const Services = () => {
   return (
-    <section id="services" className="py-10 bg-gray-50">
-      <div className="sm:max-w-7xl sm:mx-auto md:px-6 px-2 lg:px-8">
-        {/* Heading */}
-        <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold uppercase tracking-wider">
-            Our Services
-          </span>
+    <section
+      id="services"
+      className="py-20 bg-gradient-to-b from-white to-gray-50"
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
-            Solutions For Careers & Businesses
-          </h2>
-
-          <p className="max-w-3xl mx-auto mt-6 text-gray-600 text-lg">
-            We provide professional consultancy services to help individuals
-            build successful careers and modern web development services to help
-            businesses grow online.
-          </p>
-        </div>
-
-        {/* Consultancy Services */}
-        <ScrollReveal direction="left">
-        <div className="mb-10">
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-gray-900">
-              Consultancy Services
-            </h3>
-
-            <p className="text-gray-600 mt-3">
-              Career support and professional guidance for students and job
-              seekers.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 md:gap-8 gap-1">
-            {consultancyServices.map((service, index) => (
-              <ServiceCard key={index} service={service} />
-            ))}
-          </div>
-        </div>
-        </ScrollReveal>
-
-        {/* Web Development Services */}
-        <ScrollReveal direction="right">
-        <div>
-          <div className="text-center mb-10">
-            <h3 className="text-3xl font-bold text-gray-900">
-              Web Development Services
-            </h3>
-
-            <p className="text-gray-600 mt-3">
-              Professional digital solutions for startups, businesses, and
-              brands.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-2 lg:grid-cols-4 md:gap-8 gap-1">
-            {techServices.map((service, index) => (
-              <ServiceCard key={index} service={service} />
-            ))}
-          </div>
-        </div>
-        </ScrollReveal>
-
-        {/* CTA */}
         <ScrollReveal direction="bottom">
-        <div className="mt-10">
-          <div className="bg-blue-600 rounded-3xl p-5 md:p-14 text-center text-white">
-            <h3 className="text-3xl md:text-4xl font-bold mb-4">
-              Need Career Guidance Or A Professional Website?
-            </h3>
+          <div className="text-center mb-16">
 
-            <p className="max-w-2xl mx-auto text-blue-100">
-              Whether you're looking for job opportunities, career consultation,
-              or a modern website for your business, we're here to help.
+            <span className="text-blue-600 font-semibold uppercase tracking-[3px]">
+              What We Offer
+            </span>
+
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
+              Professional Recruitment & HR Solutions
+            </h2>
+
+            <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-600 leading-8">
+              HRedge Consultants provides comprehensive recruitment and HR
+              services designed to help businesses build exceptional teams while
+              supporting professionals in finding rewarding career
+              opportunities.
             </p>
 
-            <a
-              href="#contact"
-              className="
-                inline-block
-                mt-8
-                px-8
-                py-4
-                bg-white
-                text-blue-600
-                font-semibold
-                rounded-xl
-                hover:scale-105
-                transition-all
-                duration-300
-              "
-            >
-              Get Free Consultation
-            </a>
           </div>
-        </div>
         </ScrollReveal>
+
+        <ScrollReveal direction="bottom">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+            {services.map((service, index) => (
+              <ServiceCard key={index} service={service} />
+            ))}
+
+          </div>
+        </ScrollReveal>
+
+        
+
       </div>
     </section>
   );

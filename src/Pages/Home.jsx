@@ -4,32 +4,18 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   {
     image:
-      "https://images.unsplash.com/photo-1521295121783-8a321d551ad2",
-    title: "Your Gateway To Global Opportunities",
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
+    title: "Connecting Talent With Global Opportunities",
     description:
-      "Expert consultancy services for immigration, overseas education, and visa assistance.",
+      "HRedgeConsultants helps professionals and students achieve their dreams through overseas jobs, work visas, immigration support, and career guidance.",
   },
   {
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3",
-    title: "Study Abroad With Confidence",
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
+    title: "Your Trusted Partner For Overseas Careers",
     description:
-      "Get guidance for top universities, admissions, scholarships, and student visas.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1488646953014-85cb44e25828",
-    title: "Tourist & Visitor Visa Solutions",
-    description:
-      "Hassle-free visa support for international travel and family visits.",
-  },
-  {
-    image:
-      "https://images.unsplash.com/photo-1502920917128-1aa500764cbd",
-    title: "Build Your International Career",
-    description:
-      "Professional consultation for work permits, migration programs, and global opportunities.",
-  },
+      "From recruitment and documentation to visa assistance and interview preparation, we provide complete support for your international career journey.",
+  }
 ];
 
 const Home = () => {

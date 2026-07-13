@@ -12,39 +12,39 @@ import ScrollReveal from "../components/ScrollReveal";
 const reasons = [
   {
     icon: <ShieldCheck size={34} />,
-    title: "Trusted Guidance",
+    title: "Trusted Recruitment Partner",
     description:
-      "We provide honest and practical advice to help candidates and businesses make the right decisions.",
+      "We build long-term relationships by providing transparent recruitment solutions that employers and candidates can rely on.",
   },
   {
     icon: <Users size={34} />,
-    title: "Personalized Support",
+    title: "Experienced HR Professionals",
     description:
-      "Every client receives individual attention and solutions tailored to their specific needs.",
+      "Our recruitment specialists understand industry requirements and connect organizations with the right talent.",
   },
   {
     icon: <Briefcase size={34} />,
-    title: "Career Opportunities",
+    title: "Customized Hiring Solutions",
     description:
-      "We help job seekers discover opportunities that align with their skills, qualifications, and goals.",
+      "Every business has unique hiring needs, and we deliver recruitment strategies tailored to those requirements.",
   },
   {
     icon: <Laptop size={34} />,
-    title: "Modern Web Solutions",
+    title: "Industry-Focused Expertise",
     description:
-      "Professional websites and web applications built with modern technologies and best practices.",
+      "We serve businesses across multiple industries with professional recruitment and staffing solutions.",
   },
   {
     icon: <Clock3 size={34} />,
-    title: "Quick Response",
+    title: "Fast Hiring Process",
     description:
-      "We value your time and strive to provide fast communication and timely project delivery.",
+      "Our streamlined recruitment process helps businesses reduce hiring time while maintaining quality standards.",
   },
   {
     icon: <Headphones size={34} />,
-    title: "Ongoing Assistance",
+    title: "Dedicated Client Support",
     description:
-      "From consultation to project completion, we remain available to support and guide our clients.",
+      "From requirement analysis to successful placement, our team remains committed to providing continuous support.",
   },
 ];
 
@@ -53,29 +53,29 @@ const Choose = () => {
     <section id="why-choose-us" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto md:px-6 px-2 lg:px-8">
         {/* Heading */}
-        <div className="text-center mb-8">
-          <span className="text-blue-600 font-semibold uppercase tracking-wider">
-            Why Choose Us
+        <div className="text-center mb-14">
+          <span className="text-blue-600 font-semibold uppercase tracking-[3px]">
+            Why Choose HRedge Consultants
           </span>
 
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
-            The Right Partner For Your Success
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">
+            Your Trusted Recruitment & HR Partner
           </h2>
 
-          <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-600">
-            Whether you're searching for career opportunities or looking to
-            establish your business online, we provide reliable guidance,
-            professional support, and modern solutions designed for success.
+          <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-600 leading-8">
+            We combine industry knowledge, professional recruitment practices
+            and a client-focused approach to deliver hiring solutions that help
+            businesses build stronger teams while creating valuable career
+            opportunities for talented professionals.
           </p>
         </div>
-
         {/* Features Grid */}
         <ScrollReveal direction="left">
-        <div className="grid grid-cols-2 lg:grid-cols-3 md:gap-8 gap-1">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="
+          <div className="grid grid-cols-2 lg:grid-cols-3 md:gap-8 gap-1">
+            {reasons.map((reason, index) => (
+              <div
+                key={index}
+                className="
                 bg-white
                 border
                 border-gray-100
@@ -88,9 +88,9 @@ const Choose = () => {
                 duration-300
                 group
               "
-            >
-              <div
-                className="
+              >
+                <div
+                  className="
                   md:w-16
                   md:h-16
                   w-10 h-10
@@ -106,79 +106,78 @@ const Choose = () => {
                   group-hover:bg-blue-600
                   group-hover:text-white
                 "
-              >
-                {reason.icon}
+                >
+                  {reason.icon}
+                </div>
+
+                <h3 className="md:text-xl text-center text-md font-bold text-gray-900 mb-3">
+                  {reason.title}
+                </h3>
+
+                <p className="text-gray-600 text-center leading-relaxed">
+                  {reason.description}
+                </p>
               </div>
-
-              <h3 className="md:text-xl text-center text-md font-bold text-gray-900 mb-3">
-                {reason.title}
-              </h3>
-
-              <p className="text-gray-600 text-center leading-relaxed">
-                {reason.description}
-              </p>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
         </ScrollReveal>
 
         {/* Statistics */}
         <ScrollReveal direction="right">
-        <div className="mt-10 grid grid-cols-2 lg:grid-cols-4 md:gap-8 gap-2">
-          <div className="bg-blue-50 rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold text-blue-600">100+</h3>
-            <p className="mt-2 text-gray-700 font-medium">
-              Career Consultations
+          <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="bg-blue-50 rounded-2xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-blue-600">500+</h3>
+              <p className="mt-2 text-gray-700 font-medium">
+                Successful Placements
+              </p>
+            </div>
+
+            <div className="bg-blue-50 rounded-2xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-blue-600">100+</h3>
+              <p className="mt-2 text-gray-700 font-medium">
+                Corporate Clients
+              </p>
+            </div>
+
+            <div className="bg-blue-50 rounded-2xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-blue-600">15+</h3>
+              <p className="mt-2 text-gray-700 font-medium">
+                Industries Served
+              </p>
+            </div>
+
+            <div className="bg-blue-50 rounded-2xl p-8 text-center">
+              <h3 className="text-4xl font-bold text-blue-600">98%</h3>
+              <p className="mt-2 text-gray-700 font-medium">
+                Client Satisfaction
+              </p>
+            </div>
+          </div>
+
+          {/* Bottom CTA */}
+          {/* <div className="mt-16 bg-gradient-to-r from-blue-700 via-blue-600 to-blue-500 rounded-3xl p-8 md:p-14 text-center text-white">
+            <span className="uppercase tracking-[3px] text-blue-200">
+              Let's Connect
+            </span>
+
+            <h3 className="text-3xl md:text-5xl font-bold mt-4 mb-6">
+              Looking For The Right Recruitment Partner?
+            </h3>
+
+            <p className="max-w-3xl mx-auto text-blue-100 text-lg leading-8">
+              Whether you're seeking skilled professionals for your organization
+              or exploring new career opportunities, HRedge Consultants is
+              committed to delivering reliable recruitment and HR solutions with
+              professionalism, efficiency and integrity.
             </p>
-          </div>
 
-          <div className="bg-blue-50 rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold text-blue-600">50+</h3>
-            <p className="mt-2 text-gray-700 font-medium">Happy Clients</p>
-          </div>
-
-          <div className="bg-blue-50 rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold text-blue-600">20+</h3>
-            <p className="mt-2 text-gray-700 font-medium">Web Projects</p>
-          </div>
-
-          <div className="bg-blue-50 rounded-2xl p-8 text-center">
-            <h3 className="text-4xl font-bold text-blue-600">100%</h3>
-            <p className="mt-2 text-gray-700 font-medium">Dedicated Support</p>
-          </div>
-        </div>
-
-        {/* Bottom CTA */}
-        <div className="mt-10 bg-gradient-to-r from-blue-600 to-blue-700 rounded-3xl p-5 md:p-14 text-center text-white">
-          <h3 className="text-3xl md:text-4xl font-bold mb-4">
-            Ready To Take The Next Step?
-          </h3>
-
-          <p className="max-w-2xl mx-auto text-blue-100">
-            Whether you need career guidance, job assistance, or a professional
-            website for your business, our team is ready to help you achieve
-            your goals.
-          </p>
-
-          <a
-            href="#contact"
-            className="
-              inline-block
-              mt-8
-              px-8
-              py-4
-              bg-white
-              text-blue-600
-              font-semibold
-              rounded-xl
-              hover:scale-105
-              transition-all
-              duration-300
-            "
-          >
-            Contact Us Today
-          </a>
-        </div>
+            <a
+              href="#contact"
+              className="inline-flex items-center mt-8 px-8 py-4 bg-white text-blue-700 rounded-xl font-semibold hover:scale-105 transition"
+            >
+              Contact Our Team
+            </a>
+          </div> */}
         </ScrollReveal>
       </div>
     </section>
