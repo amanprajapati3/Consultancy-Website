@@ -82,6 +82,7 @@ const Choose = () => {
                 rounded-2xl
                 md:p-8 p-0.5
                 shadow-sm
+                text-center
                 hover:shadow-xl
                 hover:-translate-y-2
                 transition-all 
@@ -89,6 +90,7 @@ const Choose = () => {
                 group
               "
               >
+                <center>
                 <div
                   className="
                   md:w-16
@@ -107,8 +109,11 @@ const Choose = () => {
                   group-hover:text-white
                 "
                 >
+                  
                   {reason.icon}
+                  
                 </div>
+                </center>
 
                 <h3 className="md:text-xl text-center text-md font-bold text-gray-900 mb-3">
                   {reason.title}

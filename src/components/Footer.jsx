@@ -17,7 +17,7 @@ const Footer = () => {
     <footer className="bg-slate-950 text-white">
       {/* Main Footer */}
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+        <div className="grid text-center md:grid-cols-2 lg:grid-cols-4 gap-10">
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold mb-4">
@@ -31,7 +31,7 @@ const Footer = () => {
               development solutions.
             </p>
 
-            <div className="flex gap-4 mt-6">
+            <div className="flex justify-center gap-4 mt-6">
               <a
                 href="#"
                 className="w-10 h-10 rounded-full bg-slate-800 hover:bg-blue-600 transition-all duration-300 flex items-center justify-center"

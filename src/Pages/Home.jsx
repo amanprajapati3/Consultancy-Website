@@ -64,9 +64,9 @@ const Home = () => {
 
           <div className="absolute inset-0 bg-black/55"></div>
 
-          <div className="absolute inset-0 flex items-center">
-            <div className="max-w-7xl mx-auto px-6 lg:px-10">
-              <div className="max-w-3xl text-white">
+          <div className="absolute inset-0 flex justify-center items-center">
+            <div className="max-w-7xl flex justify-center text-center mx-auto px-6 lg:px-10">
+              <div className="max-w-3xl  text-white">
                 <h1 className="text-4xl md:text-6xl font-bold leading-tight mb-6">
                   {slide.title}
                 </h1>
@@ -75,7 +75,7 @@ const Home = () => {
                   {slide.description}
                 </p>
 
-                <div className="flex flex-nowrap sm:gap-4 gap-2">
+                <div className="flex justify-center flex-nowrap sm:gap-4 gap-2">
                   <a
                     href="#contact"
                     className="sm:px-8 p-2 sm:py-4 bg-blue-600 rounded-lg font-semibold hover:bg-blue-700 transition-all duration-300"

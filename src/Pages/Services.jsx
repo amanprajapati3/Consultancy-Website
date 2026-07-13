@@ -50,11 +50,13 @@ const services = [
 ];
 
 const ServiceCard = ({ service }) => (
-  <div className="group bg-white rounded-2xl border border-gray-100 p-8 shadow-sm hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
+  <div className="group bg-white rounded-2xl border border-gray-100 p-8 shadow-sm hover:shadow-xl text-center transition-all duration-300 hover:-translate-y-2">
 
+    <center>
     <div className="w-16 h-16 rounded-2xl bg-blue-50 flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition mb-6">
       {service.icon}
     </div>
+    </center>
 
     <h3 className="text-2xl font-semibold text-gray-900 mb-4">
       {service.title}
@@ -63,12 +65,12 @@ const ServiceCard = ({ service }) => (
     <p className="text-gray-600 leading-7">
       {service.description}
     </p>
-
+   <center>
     <button className="flex items-center gap-2 mt-6 text-blue-600 font-semibold group-hover:gap-3 transition-all">
       Learn More
       <ArrowRight size={18} />
     </button>
-
+</center>
   </div>
 );
 

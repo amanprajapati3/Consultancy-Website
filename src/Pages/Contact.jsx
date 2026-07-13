@@ -63,11 +63,11 @@ const Contact = () => {
         <div className="grid lg:grid-cols-2 gap-10 items-start">
           {/* Contact Info */}
           <ScrollReveal direction="left">
-            <div className="bg-blue-600 rounded-3xl p-10 text-white">
+            <div className="bg-blue-600 rounded-3xl  p-10 text-white">
               <h3 className="text-3xl font-bold mb-8">Get In Touch</h3>
 
               <div className="space-y-1 md:space-y-8">
-                <div className="flex gap-4">
+                <div className="flex  gap-4">
                   <Mail />
                   <div>
                     <h4 className="font-semibold">Email</h4>
