@@ -138,7 +138,7 @@ const Footer = () => {
 
                 <div>
                   <p className="text-gray-400">
-                     Kapil@HRedgeConsultants.org / 
+                     Kapil@hredgeconsultant.in / 
                      Harsh@HRedgeConsultants.org
                   </p>
                 </div>
