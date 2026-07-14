@@ -139,7 +139,7 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-400">
                      Kapil@hredgeconsultant.in / 
-                     Harsh@HRedgeConsultants.org
+                     Harsh@HRedgeConsultants.in
                   </p>
                 </div>
               </div>
