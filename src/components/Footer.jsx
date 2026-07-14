@@ -21,14 +21,12 @@ const Footer = () => {
           {/* Company Info */}
           <div>
             <h2 className="text-2xl font-bold mb-4">
-              APEX
-              <span className="text-blue-500"> Consultancy</span>
+              HRedge
+              <span className="text-blue-500"> Consultants</span>
             </h2>
 
             <p className="text-gray-400 leading-relaxed">
-              Helping students, professionals, and businesses achieve their
-              goals through career consultancy, job assistance, and modern web
-              development solutions.
+              Our core services include Executive Search, Talent Mapping, Leadership Hiring, and Strategic HR Consulting. We are committed to delivering personalized solutions with integrity and efficiency.
             </p>
 
             <div className="flex justify-center gap-4 mt-6">
@@ -116,12 +114,12 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li>Career Consultancy</li>
-              <li>Job Assistance</li>
-              <li>Interview Preparation</li>
-              <li>Website Development</li>
-              <li>Web Applications</li>
-              <li>E-Commerce Solutions</li>
+              <li>Executive Search</li>
+  <li>Permanent Recruitment</li>
+  <li>Leadership Hiring</li>
+  <li>Mid & Senior Level Hiring</li>
+  <li>Industry-Specific Talent Acquisition</li>
+  <li>Recruitment Consulting</li>
             </ul>
           </div>
 
@@ -134,13 +132,14 @@ const Footer = () => {
             <div className="space-y-5">
               <div className="flex gap-3">
                 <MdEmail
-                  size={18}
+                  size={40}
                   className="text-blue-500 mt-1"
                 />
 
                 <div>
                   <p className="text-gray-400">
-                    kapilkumarrahul5@gmail.com
+                     Kapil@HRedgeConsultants.org / 
+                     Harsh@HRedgeConsultants.org
                   </p>
                 </div>
               </div>
@@ -166,7 +165,7 @@ const Footer = () => {
 
                 <div>
                   <p className="text-gray-400">
-                    Faridaba, Haryana-India
+                    New Delhi, India
                   </p>
                 </div>
               </div>
@@ -178,13 +177,13 @@ const Footer = () => {
         <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-gray-500 text-center md:text-left">
-              © {currentYear} APEX Consultancy. All Rights Reserved.
+              © {currentYear} All Rights Reserved.
             </p>
 
             <p className="text-gray-500 text-center">
               Designed & Developed by{" "}
               <span className="text-blue-400 font-medium">
-                Aman Prajapati
+                HRedge Team
               </span>
             </p>
           </div>

@@ -36,7 +36,7 @@ const AboutUs = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Side - Feature Cards */}
           <div className="grid sm:grid-cols-2 text-center gap-6">
-            <div className="bg-white border  rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2  transition duration-300">
+            <div className="bg-white  rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2  transition duration-300">
               <center>
               <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
                 <Briefcase className="text-blue-600" size={28} />
@@ -52,7 +52,7 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
+            <div className="bg-white  rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
               <center>
               <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
                 <GraduationCap className="text-blue-600" size={28} />
@@ -67,7 +67,7 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
+            <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
               <center>
               <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
                 <ScrollIcon className="text-blue-600" size={28} />
@@ -81,7 +81,7 @@ const AboutUs = () => {
               </p>
             </div>
 
-            <div className="bg-white border rounded-2xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300">
+            <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
               <center>
               <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
                 <Globe className="text-blue-600" size={28} />
@@ -267,8 +267,8 @@ const AboutUs = () => {
 
             <div className="text-center bg-blue-50 p-8 rounded-2xl">
               <Code className="mx-auto text-blue-600 mb-4" size={40} />
-              <h4 className="text-3xl font-bold text-gray-900">20+</h4>
-              <p className="text-gray-600 mt-2">Web Projects Delivered</p>
+              <h4 className="text-3xl font-bold text-gray-900">10+</h4>
+              <p className="text-gray-600 mt-2">Years of Industry Experience</p>
             </div>
           </div>
 

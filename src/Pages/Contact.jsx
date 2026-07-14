@@ -71,7 +71,7 @@ const Contact = () => {
                   <Mail />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-blue-100 break-all">kapilkumarrahul5@gmail.com</p>
+                    <p className="text-blue-100 break-all">Kapil@HRedgeConsultants.org</p>
                   </div>
                 </div>
 
@@ -87,7 +87,7 @@ const Contact = () => {
                   <MapPin />
                   <div>
                     <h4 className="font-semibold">Location</h4>
-                    <p className="text-blue-100">Faridabad, Haryana-India</p>
+                    <p className="text-blue-100">New Delhi, India</p>
                   </div>
                 </div>
               </div>
@@ -129,15 +129,15 @@ const Contact = () => {
                 >
                   <option value="">Select Service</option>
 
-                  <option>Career Consultancy</option>
+                  <option>Recruitment Services</option>
 
-                  <option>Job Assistance</option>
+                  <option>Talent Acquisition</option>
 
-                  <option>Website Development</option>
+                  <option>HR Consulting</option>
 
-                  <option>Web Application</option>
+                  <option>Executive Hiring</option>
 
-                  <option>E-Commerce Website</option>
+                  <option>Career Guidance / Job Assistance</option>
                 </select>
 
                 <textarea
