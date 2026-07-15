@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   Briefcase,
   GraduationCap,
@@ -7,6 +7,63 @@ import {
   ScrollIcon,
 } from "lucide-react";
 import ScrollReveal from "../components/ScrollReveal";
+
+// Stats data — value is the numeric part, suffix is anything after it (+, %, etc.)
+const stats = [
+  { icon: <Briefcase className="mx-auto text-blue-600 mb-4" size={40} />, value: 100, suffix: "+", label: "Job Consultations" },
+  { icon: <Globe className="mx-auto text-blue-600 mb-4" size={40} />, value: 50, suffix: "+", label: "Clients Assisted" },
+  { icon: <Code className="mx-auto text-blue-600 mb-4" size={40} />, value: 10, suffix: "+", label: "Years of Industry Experience" },
+];
+
+// Counts up from 0 to `end` once the element scrolls into view
+const Counter = ({ end, suffix = "", duration = 1500 }) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime = null;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      // ease-out for a smoother finish
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * end));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [hasStarted, end, duration]);
+
+  return (
+    <h4 ref={ref} className="text-3xl font-bold text-gray-900">
+      {count}
+      {suffix}
+    </h4>
+  );
+};
 
 const AboutUs = () => {
   return (
@@ -38,9 +95,9 @@ const AboutUs = () => {
           <div className="grid sm:grid-cols-2 text-center gap-6">
             <div className="bg-white  rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2  transition duration-300">
               <center>
-              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
-                <Briefcase className="text-blue-600" size={28} />
-              </div>
+                <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
+                  <Briefcase className="text-blue-600" size={28} />
+                </div>
               </center>
 
               <h3 className="text-xl font-bold mb-3">Recruitment Services</h3>
@@ -54,9 +111,9 @@ const AboutUs = () => {
 
             <div className="bg-white  rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
               <center>
-              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
-                <GraduationCap className="text-blue-600" size={28} />
-              </div>
+                <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
+                  <GraduationCap className="text-blue-600" size={28} />
+                </div>
               </center>
 
               <h3 className="text-xl font-bold mb-3">Talent Acquisition</h3>
@@ -69,10 +126,10 @@ const AboutUs = () => {
 
             <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
               <center>
-              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
-                <ScrollIcon className="text-blue-600" size={28} />
-              </div>
-</center>
+                <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
+                  <ScrollIcon className="text-blue-600" size={28} />
+                </div>
+              </center>
               <h3 className="text-xl font-bold mb-3">HR Consulting</h3>
 
               <p className="text-gray-600 leading-7">
@@ -83,9 +140,9 @@ const AboutUs = () => {
 
             <div className="bg-white rounded-2xl p-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition duration-300">
               <center>
-              <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
-                <Globe className="text-blue-600" size={28} />
-              </div>
+                <div className="w-14 h-14 rounded-xl bg-blue-100 flex items-center justify-center mb-5">
+                  <Globe className="text-blue-600" size={28} />
+                </div>
               </center>
 
               <h3 className="text-xl font-bold mb-3">Industry Expertise</h3>
@@ -102,35 +159,47 @@ const AboutUs = () => {
             <span className="text-blue-600 font-semibold uppercase tracking-[3px]">
               Who We Are
             </span>
-
             <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
               Your Reliable Recruitment Partner
             </h2>
-
             <p className="text-gray-600 leading-8 mb-6">
-              HRedge Consultants is a trusted recruitment and staffing company
-              dedicated to helping organizations hire skilled professionals
-              while supporting candidates in finding meaningful career
-              opportunities. Through our structured recruitment process, we
-              bridge the gap between talented individuals and growing
-              businesses.
-            </p>
-
+              Founded in 2020 by K.K. Rahul, HR Edge Consultant is a specialized
+              Executive Search and Recruitment Consultancy dedicated to helping
+              organizations hire the right talent across diverse
+              industries.{" "}
+            </p>{" "}
             <p className="text-gray-600 leading-8 mb-6">
-              We believe every organization deserves the right talent and every
-              professional deserves the right opportunity. Our experienced
-              recruitment team works closely with clients to understand their
-              hiring needs and delivers customized staffing solutions with
-              speed, accuracy and professionalism.
+              We serve diverse clients across{" "}
+              <strong>
+                {" "}
+                Manufacturing & Engineering, Real Estate & Infrastructure, FMCG
+                & Consumer Durables, Education, IT, BFSI and the Services
+                sector{" "}
+              </strong>{" "}
+              through a team of trained, specialized and experienced recruitment
+              professionals.
             </p>
-
+            <p className="text-gray-600 leading-8 mb-6">
+              Recruitment and selection are our core strengths. We source and
+              recommend suitable professionals within stipulated timelines
+              through:{" "}
+              <h1 className="text-left">
+                {" "}
+                <br /> • A comprehensive database of over 200,000 current
+                candidate profiles <br /> • Targeted headhunting and executive
+                search <br /> • Industry networking, research, and competitive
+                intelligence <br /> • Advertisement drafting and response
+                management <br /> •Resume screening and shortlisting <br /> •
+                Preliminary interviews and assessments <br /> • Comparative
+                candidate evaluation reports.{" "}
+              </h1>
+            </p>
             <p className="text-gray-600 leading-8">
-              Whether you require permanent recruitment, executive hiring,
-              manpower solutions or HR consulting, HRedge Consultants is
-              committed to delivering quality services built on trust,
-              transparency and long-term partnerships.
+              Our commitment to trust, confidentiality, and ethical recruitment
+              practices has helped us retain more than 90% of our clientele. We
+              do not headhunt from our existing clients and do not consider
+              candidates previously placed through us for future opportunities.
             </p>
-
             <a
               href="#contact"
               className="inline-flex mt-8 bg-blue-600 text-white px-7 py-3 rounded-xl font-semibold hover:bg-blue-700 transition"
@@ -253,23 +322,16 @@ const AboutUs = () => {
         {/* Stats */}
         <ScrollReveal direction="bottom">
           <div className="grid sm:grid-cols-3 grid-cols-2 gap-2 sm:gap-8 mt-10">
-            <div className="text-center bg-blue-50 sm:p-8 p-2 rounded-2xl">
-              <Briefcase className="mx-auto text-blue-600 mb-4" size={40} />
-              <h4 className="text-3xl font-bold text-gray-900">100+</h4>
-              <p className="text-gray-600 mt-2">Job Consultations</p>
-            </div>
-
-            <div className="text-center bg-blue-50 p-8 rounded-2xl">
-              <Globe className="mx-auto text-blue-600 mb-4" size={40} />
-              <h4 className="text-3xl font-bold text-gray-900">50+</h4>
-              <p className="text-gray-600 mt-2">Clients Assisted</p>
-            </div>
-
-            <div className="text-center bg-blue-50 p-8 rounded-2xl">
-              <Code className="mx-auto text-blue-600 mb-4" size={40} />
-              <h4 className="text-3xl font-bold text-gray-900">10+</h4>
-              <p className="text-gray-600 mt-2">Years of Industry Experience</p>
-            </div>
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="text-center bg-blue-50 sm:p-8 p-2 rounded-2xl"
+              >
+                {stat.icon}
+                <Counter end={stat.value} suffix={stat.suffix} />
+                <p className="text-gray-600 mt-2">{stat.label}</p>
+              </div>
+            ))}
           </div>
 
           {/* CTA */}

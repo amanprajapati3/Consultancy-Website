@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from "react";
-import { ChevronLeft, ChevronRight, ArrowRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, ArrowRight, ShieldAlert, X } from "lucide-react";
 
 const slides = [
   {
@@ -24,6 +24,9 @@ const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
+  // Scam alert popup state
+  const [showAlert, setShowAlert] = useState(false);
+
   const nextSlide = useCallback(() => {
     setCurrentSlide((prev) => (prev === slides.length - 1 ? 0 : prev + 1));
   }, []);
@@ -39,6 +42,14 @@ const Home = () => {
     return () => clearInterval(timer);
   }, [isPaused, nextSlide]);
 
+  // Show the scam alert popup 4.5 seconds after the page loads
+  useEffect(() => {
+    const alertTimer = setTimeout(() => {
+      setShowAlert(true);
+    }, 4500);
+    return () => clearTimeout(alertTimer);
+  }, []);
+
   return (
     <section
       id="home"
@@ -46,6 +57,61 @@ const Home = () => {
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
+      {/* Scam Awareness Popup */}
+      {showAlert && (
+        <div className="fixed inset-0 z-[100] flex items-center justify-center px-4">
+          <div
+            className="absolute inset-0 bg-slate-900/60 backdrop-blur-sm"
+            onClick={() => setShowAlert(false)}
+          />
+
+          <div className="relative w-full max-w-md bg-white rounded-2xl shadow-2xl overflow-hidden animate-[fadeIn_0.3s_ease-out]">
+            <div className="h-1.5 w-full bg-gradient-to-r from-blue-600 via-blue-500 to-blue-400" />
+
+            <button
+              onClick={() => setShowAlert(false)}
+              aria-label="Close alert"
+              className="absolute top-4 right-4 w-8 h-8 rounded-full flex items-center justify-center text-slate-400 hover:text-white hover:bg-blue-600 transition-colors duration-200"
+            >
+              <X size={18} />
+            </button>
+
+            <div className="px-6 sm:px-8 pt-8 pb-7 text-center">
+              <div className="mx-auto mb-5 w-16 h-16 rounded-full bg-red-100 border border-red-100 flex items-center justify-center">
+                <ShieldAlert className="text-red-600" size={30} />
+              </div>
+
+              <span className="inline-block text-blue-600 font-semibold uppercase tracking-[2px] text-xs mb-2">
+                Important Notice
+              </span>
+
+              <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
+                Beware of Scammers
+              </h2>
+
+              <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-2">
+                HRedge Consultants{" "}
+                <span className="font-semibold text-slate-900">
+                  never charges candidates
+                </span>{" "}
+                any fee at any stage of the recruitment process.
+              </p>
+              <p className="text-slate-500 text-xs sm:text-sm mb-7">
+                If anyone asks you for money on our behalf, please report it
+                and avoid making any payment.
+              </p>
+
+              <button
+                onClick={() => setShowAlert(false)}
+                className="w-full sm:w-auto px-8 py-3 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 active:scale-[0.98] transition-all duration-200"
+              >
+                I Understand
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* Slides */}
       {slides.map((slide, index) => (
         <div

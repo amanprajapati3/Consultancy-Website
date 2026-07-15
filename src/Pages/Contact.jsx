@@ -14,7 +14,7 @@ const Contact = () => {
     const formData = new FormData(e.target);
 
     try {
-      const response = await fetch("https://formspree.io/f/xjgzdewn", {
+      const response = await fetch("https://formspree.io/f/mlgqggrv", {
         method: "POST",
         body: formData,
         headers: {
@@ -71,7 +71,7 @@ const Contact = () => {
                   <Mail />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-blue-100 break-all">Kapil@hredgeconsultant.in</p>
+                    <p className="text-blue-100 break-all"><a href="mailto:kkrahul@hredgeconsultant.in">kkrahul@hredgeconsultant.in</a></p>
                   </div>
                 </div>
 
@@ -79,7 +79,7 @@ const Contact = () => {
                   <Phone />
                   <div>
                     <h4 className="font-semibold">Phone</h4>
-                    <p className="text-blue-100">+91 81305 87559</p>
+                    <p className="text-blue-100"><a href="tel:+91 81305 87559">+91 81305 87559</a></p>
                   </div>
                 </div>
 
@@ -148,7 +148,7 @@ const Contact = () => {
                 />
 
                 {/* Resume Upload */}
-                <div>
+                {/* <div>
                   <label className="block mb-2 font-medium">
                     Resume Google Drive Link (Optional)
                   </label>
@@ -159,7 +159,7 @@ const Contact = () => {
                     placeholder="Paste Google Drive Resume Link"
                     className="w-full max-w-full border rounded-xl px-4 py-3"
                   />
-                </div>
+                </div> */}
 
                 <button
                   type="submit"

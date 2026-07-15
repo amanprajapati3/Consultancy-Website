@@ -94,10 +94,7 @@ const Services = () => {
             </h2>
 
             <p className="max-w-3xl mx-auto mt-6 text-lg text-gray-600 leading-8">
-              HRedge Consultants provides comprehensive recruitment and HR
-              services designed to help businesses build exceptional teams while
-              supporting professionals in finding rewarding career
-              opportunities.
+              Our core services include Executive Search, Talent Mapping, Leadership Hiring, and Strategic HR Consulting. We are committed to delivering personalized solutions with integrity and efficiency.
             </p>
 
           </div>

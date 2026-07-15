@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import {
   ShieldCheck,
   Users,
@@ -47,6 +47,64 @@ const reasons = [
       "From requirement analysis to successful placement, our team remains committed to providing continuous support.",
   },
 ];
+
+// Stats data — value is the numeric part, suffix is anything after it (+, %, etc.)
+const stats = [
+  { value: 500, suffix: "+", label: "Successful Placements" },
+  { value: 100, suffix: "+", label: "Corporate Clients" },
+  { value: 15, suffix: "+", label: "Industries Served" },
+  { value: 98, suffix: "%", label: "Client Satisfaction" },
+];
+
+// Counts up from 0 to `end` once the element scrolls into view
+const Counter = ({ end, suffix = "", duration = 1500 }) => {
+  const [count, setCount] = useState(0);
+  const [hasStarted, setHasStarted] = useState(false);
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && !hasStarted) {
+          setHasStarted(true);
+        }
+      },
+      { threshold: 0.4 }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [hasStarted]);
+
+  useEffect(() => {
+    if (!hasStarted) return;
+
+    let startTime = null;
+
+    const step = (timestamp) => {
+      if (!startTime) startTime = timestamp;
+      const progress = Math.min((timestamp - startTime) / duration, 1);
+      // ease-out for a smoother finish
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setCount(Math.floor(eased * end));
+
+      if (progress < 1) {
+        requestAnimationFrame(step);
+      } else {
+        setCount(end);
+      }
+    };
+
+    requestAnimationFrame(step);
+  }, [hasStarted, end, duration]);
+
+  return (
+    <h3 ref={ref} className="text-4xl font-bold text-blue-600">
+      {count}
+      {suffix}
+    </h3>
+  );
+};
 
 const Choose = () => {
   return (
@@ -130,33 +188,15 @@ const Choose = () => {
         {/* Statistics */}
         <ScrollReveal direction="right">
           <div className="mt-16 grid grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-blue-50 rounded-2xl p-8 text-center">
-              <h3 className="text-4xl font-bold text-blue-600">500+</h3>
-              <p className="mt-2 text-gray-700 font-medium">
-                Successful Placements
-              </p>
-            </div>
-
-            <div className="bg-blue-50 rounded-2xl p-8 text-center">
-              <h3 className="text-4xl font-bold text-blue-600">100+</h3>
-              <p className="mt-2 text-gray-700 font-medium">
-                Corporate Clients
-              </p>
-            </div>
-
-            <div className="bg-blue-50 rounded-2xl p-8 text-center">
-              <h3 className="text-4xl font-bold text-blue-600">15+</h3>
-              <p className="mt-2 text-gray-700 font-medium">
-                Industries Served
-              </p>
-            </div>
-
-            <div className="bg-blue-50 rounded-2xl p-8 text-center">
-              <h3 className="text-4xl font-bold text-blue-600">98%</h3>
-              <p className="mt-2 text-gray-700 font-medium">
-                Client Satisfaction
-              </p>
-            </div>
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="bg-blue-50 rounded-2xl p-8 text-center"
+              >
+                <Counter end={stat.value} suffix={stat.suffix} />
+                <p className="mt-2 text-gray-700 font-medium">{stat.label}</p>
+              </div>
+            ))}
           </div>
 
           {/* Bottom CTA */}

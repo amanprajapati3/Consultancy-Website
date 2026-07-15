@@ -63,7 +63,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#home"
-                  className="text-gray-400 hover:text-blue-400 transition-all"
+                  className="text-gray-400 hover:text-white transition-all"
                 >
                   Home
                 </a>
@@ -72,7 +72,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#about"
-                  className="text-gray-400 hover:text-blue-400 transition-all"
+                  className="text-gray-400 hover:text-white transition-all"
                 >
                   About Us
                 </a>
@@ -81,7 +81,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#services"
-                  className="text-gray-400 hover:text-blue-400 transition-all"
+                  className="text-gray-400 hover:text-white transition-all"
                 >
                   Services
                 </a>
@@ -90,7 +90,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#why-choose-us"
-                  className="text-gray-400 hover:text-blue-400 transition-all"
+                  className="text-gray-400 hover:text-white transition-all"
                 >
                   Why Choose Us
                 </a>
@@ -99,7 +99,7 @@ const Footer = () => {
               <li>
                 <a
                   href="#contact"
-                  className="text-gray-400 hover:text-blue-400 transition-all"
+                  className="text-gray-400 hover:text-white transition-all"
                 >
                   Contact Us
                 </a>
@@ -114,12 +114,12 @@ const Footer = () => {
             </h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li>Executive Search</li>
-  <li>Permanent Recruitment</li>
-  <li>Leadership Hiring</li>
-  <li>Mid & Senior Level Hiring</li>
-  <li>Industry-Specific Talent Acquisition</li>
-  <li>Recruitment Consulting</li>
+              <li className="hover:text-white cursor-default">Executive Search</li>
+  <li className="hover:text-white cursor-default">Permanent Recruitment</li>
+  <li className="hover:text-white cursor-default">Leadership Hiring</li>
+  <li className="hover:text-white cursor-default">Mid & Senior Level Hiring</li>
+  <li className="hover:text-white cursor-default">Industry-Specific Talent Acquisition</li>
+  <li className="hover:text-white cursor-default">Recruitment Consulting</li>
             </ul>
           </div>
 
@@ -130,15 +130,15 @@ const Footer = () => {
             </h3>
 
             <div className="space-y-5">
-              <div className="flex gap-3">
+              <div className="flex gap-2">
                 <MdEmail
                   size={40}
                   className="text-blue-500 mt-1"
                 />
 
                 <div>
-                  <p className="text-gray-400">
-                     Kapil@hredgeconsultant.in / 
+                  <p className="text-gray-400 hover:text-white">
+                     <a href="mailto:kkrahul@hredgeconsultant.in">kkrahul@hredgeconsultant.in</a> / 
                      Harsh@HRedgeConsultants.in
                   </p>
                 </div>
@@ -151,8 +151,8 @@ const Footer = () => {
                 />
 
                 <div>
-                  <p className="text-gray-400">
-                    +91 81305 87559
+                  <p className="text-gray-400 hover:text-white">
+                    <a href="tel:+91 81305 87559">+91 81305 87559</a>
                   </p>
                 </div>
               </div>
@@ -160,11 +160,11 @@ const Footer = () => {
               <div className="flex gap-3">
                 <MapPin
                   size={18}
-                  className="text-blue-500 mt-1"
+                  className="text-blue-500 mt-1 "
                 />
 
                 <div>
-                  <p className="text-gray-400">
+                  <p className="text-gray-400 hover:text-white cursor-default">
                     New Delhi, India
                   </p>
                 </div>
