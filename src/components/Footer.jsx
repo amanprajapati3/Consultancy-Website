@@ -22,7 +22,7 @@ const Footer = () => {
           <div>
             <h2 className="text-2xl font-bold mb-4">
               HRedge
-              <span className="text-blue-500"> Consultants</span>
+              <span className="text-blue-500"> Consultant</span>
             </h2>
 
             <p className="text-gray-400 leading-relaxed">
@@ -115,36 +115,33 @@ const Footer = () => {
 
             <ul className="space-y-3 text-gray-400">
               <li className="hover:text-white cursor-default">Executive Search</li>
-  <li className="hover:text-white cursor-default">Permanent Recruitment</li>
   <li className="hover:text-white cursor-default">Leadership Hiring</li>
-  <li className="hover:text-white cursor-default">Mid & Senior Level Hiring</li>
-  <li className="hover:text-white cursor-default">Industry-Specific Talent Acquisition</li>
-  <li className="hover:text-white cursor-default">Recruitment Consulting</li>
+  <li className="hover:text-white cursor-default">CXO Search</li>
+    <li className="hover:text-white cursor-default">Confidential Hiring</li>
             </ul>
           </div>
 
           {/* Contact */}
           <div>
-            <h3 className="text-xl font-semibold mb-5">
+            <h3 className="text-xl text-center font-semibold mb-5">
               Contact Info
             </h3>
 
             <div className="space-y-5">
-              <div className="flex gap-2">
+              <div className="flex justify-center gap-2">
                 <MdEmail
-                  size={40}
+                  size={20}
                   className="text-blue-500 mt-1"
                 />
 
                 <div>
                   <p className="text-gray-400 hover:text-white">
-                     <a href="mailto:kkrahul@hredgeconsultant.in">kkrahul@hredgeconsultant.in</a> / 
-                     Harsh@HRedgeConsultants.in
+                     <a href="mailto:info@hredgeconsultant.in">info@hredgeconsultant.in</a>
                   </p>
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex justify-center gap-3">
                 <FaPhoneAlt
                   size={18}
                   className="text-blue-500 mt-1"
@@ -157,7 +154,7 @@ const Footer = () => {
                 </div>
               </div>
 
-              <div className="flex gap-3">
+              <div className="flex justify-center gap-3">
                 <MapPin
                   size={18}
                   className="text-blue-500 mt-1 "

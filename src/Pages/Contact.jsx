@@ -46,7 +46,7 @@ const Contact = () => {
       <div className="max-w-7xl mx-auto sm:px-6 px-2 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold uppercase tracking-wider">
+          <span className="text-blue-600 font-semibold text-xl tracking-wider">
             Contact Us
           </span>
 
@@ -67,11 +67,12 @@ const Contact = () => {
               <h3 className="text-3xl font-bold mb-8">Get In Touch</h3>
 
               <div className="space-y-1 md:space-y-8">
-                <div className="flex  gap-4">
+                <div className="flex gap-4">
                   <Mail />
                   <div>
                     <h4 className="font-semibold">Email</h4>
-                    <p className="text-blue-100 break-all"><a href="mailto:kkrahul@hredgeconsultant.in">kkrahul@hredgeconsultant.in</a></p>
+                    
+                    <p className="text-blue-100 break-all"><a href="mailto:info@hredgeconsultant.in">info@hredgeconsultant.in</a></p>
                   </div>
                 </div>
 

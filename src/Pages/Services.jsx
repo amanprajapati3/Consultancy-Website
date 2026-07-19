@@ -85,7 +85,7 @@ const Services = () => {
         <ScrollReveal direction="bottom">
           <div className="text-center mb-16">
 
-            <span className="text-blue-600 font-semibold uppercase tracking-[3px]">
+            <span className="text-blue-600 font-semibold text-xl tracking-[3px]">
               What We Offer
             </span>
 

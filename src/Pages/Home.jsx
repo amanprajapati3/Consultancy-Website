@@ -6,17 +6,17 @@ const slides = [
     image:
       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1600&q=80",
     eyebrow: "Trusted HR & Recruitment Partner",
-    title: "Connecting Talent With The Right Opportunities",
+    title: "Hire The Right Talent For Your Organization",
     description:
-      "HRedge Consultants helps organizations hire skilled professionals and helps candidates find meaningful careers, backed by structured recruitment and dedicated HR consulting.",
+      "We help businesses find skilled professionals quickly through reliable recruitment solutions, saving time and helping your team grow with the right people.",
   },
   {
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1600&q=80",
-    eyebrow: "Built On Trust & Transparency",
-    title: "Your Reliable Partner For Career Growth",
+    eyebrow: "Reliable Hiring Solutions",
+    title: "We Provide Solution On Your Talent acquisition",
     description:
-      "From permanent recruitment and executive hiring to workforce planning and interview preparation, we provide complete support at every step of your hiring journey.",
+      "From hiring experienced professionals to filling key positions, we provide recruitment services that match the right talent with your business needs.",
   },
 ];
 
@@ -38,7 +38,7 @@ const Home = () => {
   useEffect(() => {
     if (isPaused) return;
 
-    const timer = setInterval(nextSlide, 5000);
+    const timer = setInterval(nextSlide, 3000);
     return () => clearInterval(timer);
   }, [isPaused, nextSlide]);
 
@@ -86,7 +86,7 @@ const Home = () => {
               </span>
 
               <h2 className="text-xl sm:text-2xl font-bold text-slate-900 mb-3">
-                Beware of Scammers
+                Be Alert of Scammers
               </h2>
 
               <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-2">
@@ -95,10 +95,6 @@ const Home = () => {
                   never charges candidates
                 </span>{" "}
                 any fee at any stage of the recruitment process.
-              </p>
-              <p className="text-slate-500 text-xs sm:text-sm mb-7">
-                If anyone asks you for money on our behalf, please report it
-                and avoid making any payment.
               </p>
 
               <button

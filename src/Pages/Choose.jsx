@@ -51,8 +51,8 @@ const reasons = [
 // Stats data — value is the numeric part, suffix is anything after it (+, %, etc.)
 const stats = [
   { value: 500, suffix: "+", label: "Successful Placements" },
-  { value: 100, suffix: "+", label: "Corporate Clients" },
-  { value: 15, suffix: "+", label: "Industries Served" },
+  { value: 50, suffix: "+", label: "Corporate Clients" },
+  { value: 10, suffix: "+", label: "Industries Served" },
   { value: 98, suffix: "%", label: "Client Satisfaction" },
 ];
 
@@ -112,8 +112,8 @@ const Choose = () => {
       <div className="max-w-7xl mx-auto md:px-6 px-2 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-14">
-          <span className="text-blue-600 font-semibold uppercase tracking-[3px]">
-            Why Choose HRedge Consultants
+          <span className="text-blue-600 font-semibold text-xl tracking-[3px]">
+            Why Choose HRedge Consultant
           </span>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-4">

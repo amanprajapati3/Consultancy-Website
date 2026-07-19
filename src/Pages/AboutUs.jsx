@@ -71,8 +71,8 @@ const AboutUs = () => {
       <div className="max-w-7xl mx-auto sm:px-6 px-2 lg:px-8">
         {/* Heading */}
         <div className="text-center mb-16">
-          <span className="text-blue-600 font-semibold uppercase tracking-widest">
-            Welcome To HRedge Consultants
+          <span className="text-blue-600 font-semibold text-xl tracking-widest">
+            Welcome To HRedge Consultant
           </span>
 
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mt-3">
@@ -156,7 +156,7 @@ const AboutUs = () => {
 
           {/* Right Side - Company Content */}
           <div className="text-center md:text-left">
-            <span className="text-blue-600 font-semibold uppercase tracking-[3px]">
+            <span className="text-blue-600 font-semibold text-xl tracking-[3px]">
               Who We Are
             </span>
             <h2 className="text-4xl font-bold text-gray-900 mt-4 mb-6 leading-tight">
@@ -189,7 +189,7 @@ const AboutUs = () => {
                 candidate profiles <br /> • Targeted headhunting and executive
                 search <br /> • Industry networking, research, and competitive
                 intelligence <br /> • Advertisement drafting and response
-                management <br /> •Resume screening and shortlisting <br /> •
+                management <br /> • Resume screening and shortlisting <br /> •
                 Preliminary interviews and assessments <br /> • Comparative
                 candidate evaluation reports.{" "}
               </h1>

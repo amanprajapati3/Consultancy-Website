@@ -60,7 +60,7 @@ const Header = () => {
               href="#home"
               className="flex py-2 md:py-0"
             >
-              <img src="/logo2.jpeg" alt="" className="md:w-20 w-12 md:h-20 h-12" /> <span className="mt-3 md:mt-7 font-bold md:text-xl"> <span className="text-sky-700">HR Edge</span> Consultants</span>
+              <img src="/logo2.jpeg" alt="" className="md:w-16 w-12 md:h-16 h-12" /> <span className="mt-3 md:mt-5 font-bold md:text-xl"> <span className="text-sky-700 pl-2">HRedge</span> Consultant</span>
             </a>
 
             {/* Desktop Menu */}
